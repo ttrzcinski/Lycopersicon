@@ -49,7 +49,7 @@ namespace AspNetCore_EchoBot_With_State
                 // The Memory Storage used here is for local bot debugging only. When the bot
                 // is restarted, anything stored in memory will be gone. 
                 IStorage dataStore = new MemoryStorage();
-
+                // TODO Add solid storage on HDD or in cloud with Storage service.. or GitHub?!
                 // The File data store, shown here, is suitable for bots that run on 
                 // a single machine and need durable state across application restarts.                 
                 // IStorage dataStore = new FileStorage(System.IO.Path.GetTempPath());
@@ -63,7 +63,6 @@ namespace AspNetCore_EchoBot_With_State
                 // IStorage dataStore = new Microsoft.Bot.Builder.Azure.AzureTableStorage("AzureTablesConnectionString", "TableName");
                 // IStorage dataStore = new Microsoft.Bot.Builder.Azure.AzureBlobStorage("AzureBlobConnectionString", "containerName");
 
-                options.Middleware.Add(new ConversationState<EchoState>(dataStore));
                 options.Middleware.Add(new ConversationState<EchoState>(dataStore));
             });
         }

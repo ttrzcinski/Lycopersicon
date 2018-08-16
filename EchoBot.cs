@@ -26,14 +26,15 @@ namespace AspNetCore_EchoBot_With_State
             if (context.Activity.Type == ActivityTypes.Message)
             {
                 // Get the conversation state from the turn context
-                var brain = context.GetConversationState<Brain>();
+                var state = context.GetConversationState<EchoState>();
 
                 // Bump the turn count. 
-                brain.memory.Change("TurnCount","++");
-                //brain.memory.TurnCount++;
+                //brain.memory.Change("TurnCount","++");
+                state.TurnCount++;
 
                 // Call brain to respond
-                var response = brain.respond(context.Activity.Text);
+                var response = $"{state.TurnCount}: You wrote: {context.Activity.Text}.";
+                //brain.respond(context.Activity.Text);
 
                 // Echo back to the user whatever they typed.
                 await context.SendActivity(response);
