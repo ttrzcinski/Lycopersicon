@@ -29,12 +29,11 @@ namespace AspNetCore_EchoBot_With_State
                 var brain = context.GetConversationState<Brain>();
 
                 // Bump the turn count. 
-                brain.memory.TurnCount++;
-
-                var response = "..";
+                brain.memory.Change("TurnCount","++");
+                //brain.memory.TurnCount++;
 
                 // Call brain to respond
-                response = brain.respond(context.Activity.Text);
+                var response = brain.respond(context.Activity.Text);
 
                 // Echo back to the user whatever they typed.
                 await context.SendActivity(response);

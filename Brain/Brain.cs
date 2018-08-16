@@ -13,34 +13,36 @@ namespace Lycopersicon_src.Brain
 
         public string respond(string phrase)
         {
-            //Check entered phrase
-
+            // Check entered phrase
             if (string.IsNullOrWhiteSpace(phrase)) {
                 return "So.. silent..";
             }
+            // Make it lowercase
             var question = phrase.ToLower();
-            //
+            //Process given question
+            var analysis = talking.process(question);
+            //Go through known responses
             var response = "...";
             switch (phrase)
             {
                 case "hello":
-                    if (memory.greeting)
+                    if (memory.Exists("greeting","1"))
                     {
                         response = "We've already greeted Today.";
                     }
                     else
                     {
                         response = "Hello!";
-                        memory.greeting = true;
+                        memory.Put("greeting", "1");
                     }
 
                     break;
 
                 case "bye":
-                    if (memory.greeting)
+                    if (memory.Exists("greeting","0"))
                     {
                         response = "Bye!";
-                        memory.greeting = false;
+                        memory.Put("greeting", "0");
                     }
                     else
                     {
@@ -50,7 +52,8 @@ namespace Lycopersicon_src.Brain
                     break;
 
                 default:
-                    response = $"Turn {memory.TurnCount}: You sent '{phrase}'";
+                    var resp = memory.Read("TurnCount") ?? "undefined count";
+                    response = $"Turn {resp}: You sent '{phrase}'";
                     break;
             }
             return response;
