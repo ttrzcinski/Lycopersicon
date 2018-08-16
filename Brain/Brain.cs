@@ -68,9 +68,8 @@ namespace Lycopersicon_src.Brain
             var successCount = 0;
             var result = new Dictionary<string, object>();
             foreach (var key in keys) {
-                int precount = successCount;
                 result.Add(key, memory.Read(key));
-                if (precount != result.Count) {
+                if (successCount +1 == result.Count) {
                     successCount++;
                 }
             }
