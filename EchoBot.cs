@@ -30,8 +30,10 @@ namespace AspNetCore_EchoBot_With_State
                 // Bump the turn count. 
                 state.TurnCount++;
 
+                var response = $"Turn {state.TurnCount}: You sent '{context.Activity.Text}'";
+
                 // Echo back to the user whatever they typed.
-                await context.SendActivity($"Turn {state.TurnCount}: You sent '{context.Activity.Text}'");
+                await context.SendActivity(response);
             }
         }
     }    
