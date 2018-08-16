@@ -12779,11 +12779,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\vsproj\\Lycopersicon-src\\AspNetCore-EchoBot-With-State.csproj",
+      "projectUniqueName": "c:\\vsproj\\Lycopersicon-src\\AspNetCore-EchoBot-With-State.csproj",
       "projectName": "AspNetCore-EchoBot-With-State",
-      "projectPath": "C:\\vsproj\\Lycopersicon-src\\AspNetCore-EchoBot-With-State.csproj",
+      "projectPath": "c:\\vsproj\\Lycopersicon-src\\AspNetCore-EchoBot-With-State.csproj",
       "packagesPath": "C:\\Users\\ttrzcins\\.nuget\\packages\\",
-      "outputPath": "C:\\vsproj\\Lycopersicon-src\\obj\\",
+      "outputPath": "c:\\vsproj\\Lycopersicon-src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

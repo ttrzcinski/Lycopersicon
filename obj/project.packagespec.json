@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\vsproj\\Lycopersicon-src\\AspNetCore-EchoBot-With-State.csproj",
+    "projectName": "AspNetCore-EchoBot-With-State",
+    "projectPath": "C:\\vsproj\\Lycopersicon-src\\AspNetCore-EchoBot-With-State.csproj",
+    "outputPath": "C:\\vsproj\\Lycopersicon-src\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.0"
+    ],
+    "frameworks": {
+      "netcoreapp2.0": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.0": {
+      "dependencies": {
+        "Microsoft.AspNetCore.All": {
+          "target": "Package",
+          "version": "[2.0.5, )"
+        },
+        "Microsoft.Bot.Builder.Core": {
+          "target": "Package",
+          "version": "[4.0.1-preview, )"
+        },
+        "Microsoft.Bot.Builder.Core.Extensions": {
+          "target": "Package",
+          "version": "[4.0.1-preview, )"
+        },
+        "Microsoft.Bot.Builder.Integration.AspNet.Core": {
+          "target": "Package",
+          "version": "[4.0.1-preview, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.0.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

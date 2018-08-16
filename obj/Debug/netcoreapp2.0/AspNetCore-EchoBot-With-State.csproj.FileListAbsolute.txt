@@ -1,0 +1,11 @@
+c:\vsproj\Lycopersicon-src\bin\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.deps.json
+c:\vsproj\Lycopersicon-src\bin\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.runtimeconfig.json
+c:\vsproj\Lycopersicon-src\bin\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.runtimeconfig.dev.json
+c:\vsproj\Lycopersicon-src\bin\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.dll
+c:\vsproj\Lycopersicon-src\bin\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.pdb
+c:\vsproj\Lycopersicon-src\obj\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.csprojAssemblyReference.cache
+c:\vsproj\Lycopersicon-src\obj\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.csproj.CoreCompileInputs.cache
+c:\vsproj\Lycopersicon-src\obj\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.AssemblyInfoInputs.cache
+c:\vsproj\Lycopersicon-src\obj\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.AssemblyInfo.cs
+c:\vsproj\Lycopersicon-src\obj\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.dll
+c:\vsproj\Lycopersicon-src\obj\Debug\netcoreapp2.0\AspNetCore-EchoBot-With-State.pdb
