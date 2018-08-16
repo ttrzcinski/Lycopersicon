@@ -123,5 +123,21 @@ namespace Lycopersicon_src.Brain
             }
             return false;
         }
+
+        /// <summary>
+        /// Removes pointed fact, if exists.
+        /// </summary>
+        /// <param name="fact">pointed fact's name</param>
+        /// <returns>true, if removed, false otherwise</returns>
+        public bool Remove(string fact)
+        {
+            // check entered params
+            if (string.IsNullOrWhiteSpace(fact))
+            {
+                return false;
+            }
+            fact = fact.ToLower();
+            return facts.ContainsKey(fact) ? facts.Remove(fact) : false;
+        }
     }
 }
