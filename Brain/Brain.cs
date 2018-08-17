@@ -18,7 +18,7 @@ namespace Lycopersicon_src.Brain
         public string respond(string phrase)
         {
             // Check entered phrase
-            if (string.IsNullOrWhiteSpace(phrase)) {
+            if (string.IsNullOrEmpty(phrase)) {
                 return "So.. silent..";
             }
             // Make it lowercase
