@@ -14,5 +14,12 @@ namespace AspNetCore_EchoBot_With_State
         public bool Lycopersicon { get; set; }
 
         public Brain Brain { get; set; }
+
+        public EchoState() {
+            if (Brain == null)
+            {
+                Brain = new Brain();
+            }
+        }
     }
 }
