@@ -31,7 +31,7 @@ namespace AspNetCore_EchoBot_With_State
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddBot<EchoBot>(options =>
+            services.AddBot<Bots.EchoBot>(options =>
             {
                 options.CredentialProvider = new ConfigurationCredentialProvider(Configuration);
 
@@ -43,7 +43,8 @@ namespace AspNetCore_EchoBot_With_State
                 options.Middleware.Add(new CatchExceptionMiddleware<Exception>(async (context, exception) =>
                 {
                     await context.TraceActivity("EchoBot Exception", exception);
-                    await context.SendActivity("Sorry, it looks like something went wrong!");
+                    await context.SendActivity("Sorry, it looks like something went wrong! - ");
+                    await context.SendActivity(exception.ToString());
                 }));
 
                 // The Memory Storage used here is for local bot debugging only. When the bot

@@ -9,7 +9,7 @@ namespace Lycopersicon_src.Brain
     /// <summary>
     /// Works as a hub for all brain's functions and entry points.
     /// </summary>
-    public class Brain : Microsoft.Bot.Builder.Core.Extensions.IStorage
+    public class Brain // : Microsoft.Bot.Builder.Core.Extensions.IStorage
     {
         private BrocasArea talking;
 
@@ -63,7 +63,7 @@ namespace Lycopersicon_src.Brain
             return response;
         }
 
-        public Task<IEnumerable<KeyValuePair<string, object>>> Read(params string[] keys)
+        /*public Task<IEnumerable<KeyValuePair<string, object>>> Read(params string[] keys)
         {
             var successCount = 0;
             var result = new Dictionary<string, object>();
@@ -104,6 +104,6 @@ namespace Lycopersicon_src.Brain
             return successCount == keys.Length 
                 ? Task.CompletedTask
                 : Task.FromException(new KeyNotFoundException("Not all keys were found."));
-        }
+        }*/
     }
 }

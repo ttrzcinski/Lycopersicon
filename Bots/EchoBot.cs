@@ -8,7 +8,7 @@ using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Core.Extensions;
 using Microsoft.Bot.Schema;
 
-namespace AspNetCore_EchoBot_With_State
+namespace AspNetCore_EchoBot_With_State.Bots
 {
     public class EchoBot : IBot
     {
