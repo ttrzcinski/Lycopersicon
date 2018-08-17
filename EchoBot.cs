@@ -33,7 +33,12 @@ namespace AspNetCore_EchoBot_With_State
                 state.TurnCount++;
 
                 // Call brain to respond
-                var response = $"{state.TurnCount}: You wrote: {context.Activity.Text}.";
+                var response = state.Brain.respond(context.Activity.Text);
+                bool echoDebug = false;
+                if (echoDebug) {
+                    response = $"{state.TurnCount}: You wrote: {context.Activity.Text}.";
+                    await context.SendActivity(response);
+                }
                 //brain.respond(context.Activity.Text);
 
                 // Echo back to the user whatever they typed.
